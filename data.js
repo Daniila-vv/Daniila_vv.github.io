@@ -10,13 +10,13 @@ let skills = document.getElementById('skills')
 function buildCharts() {
     let token = localStorage.getItem('token')
     if (token === null || token === undefined) {
-        location.replace('index.html')
+        location.replace('/charts/index.html')
     }
 
-    gerData(token)
+    getData(token)
         .then((info) => {
             const userInfo = info.data.user[0]
-            console.log(useInfo)
+            console.log(userInfo)
             studentName.innerText = `${userInfo.attrs.firstName}  ${userInfo.attrs.lastName}`
             studentGitea.action = `https://01.kood.tech/git/${userInfo.login}`
             studentEmail.innerText = userInfo.attrs.email
@@ -52,7 +52,7 @@ function buildCharts() {
     const logout = document.getElementById('logout-btn')
     logout.addEventListener('click', () => {
         localStorage.removeItem('token')
-        location.replace('index.html')
+        location.replace('/charts/index.html')
     })
 }
 
@@ -246,5 +246,3 @@ function convertBytesToSize(bytes) {
 }
 
 buildCharts()
-            
-  

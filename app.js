@@ -1,13 +1,14 @@
 function entry() {
     let token = localStorage.getItem('token')
     if (token === null || token === undefined) {
-        const form = document.getElementById('form-id') 
+
+        const form = document.getElementById('form-id')
         const nickname = document.getElementById('nickname')
         const password = document.getElementById('password')
 
         form.addEventListener('submit', async (event) => {
             event.preventDefault()
-            const credentials = btoa('${nickname.value}:${password.value}')
+            const credentials = btoa(`${nickname.value}:${password.value}`)
             const response = await fetch("https://01.kood.tech/api/auth/signin", {
                 method: 'POST',
                 headers: {
@@ -20,15 +21,13 @@ function entry() {
             if (token.error) {
                 let err = document.getElementById('err-sign')
                 err.style.display = 'block'
-
             } else {
                 localStorage.setItem('token', token)
-                location.replace('data.html')
+                location.replace('/charts/data.html')
             }
         })
-        
     } else {
-        location.replace('data.html')
+        location.replace('/charts/data.html')
     }
 }
 
