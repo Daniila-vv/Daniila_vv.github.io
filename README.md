@@ -1,4 +1,3 @@
-# charts
 
 ## Table of Contents
 - ### [General Information](#general-information)
@@ -20,7 +19,7 @@ No, I am not storing your data.
 - ### [GraphQL](https://graphql.org/)
 
 ## Deploy
-You can test the project from the page (https://github.com/Daniila-vv/Daniila_vv.github.io.git)
+You can test the project from the page [https://github.com/Daniila-vv/Daniila_vv.github.io](https://github.com/Daniila-vv/Daniila_vv.github.io.git)
 
 ## Local Audit
 Clone the repository
