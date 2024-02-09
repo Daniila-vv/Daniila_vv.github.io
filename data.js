@@ -88,11 +88,11 @@ function makeXpChart(tasks) {
             offsetY: -20,
             style: {
                 fontSize: '12px',
-                colors: ["#304758"]
+                colors: ["#420690"]
             }
         },
         theme: {
-            palette: 'palette5'
+            palette: 'palette2'
         },
         xaxis: {
             categories: categories,
@@ -142,7 +142,7 @@ function makeSkillsChart(tasks) {
             type: 'treemap'
         },
         theme: {
-            palette: 'palette5'
+            palette: 'palette2'
         },
         title: {
             text: 'Your skills distribution'
@@ -165,7 +165,7 @@ function makeAuditsChart(up, down) {
         theme: {
             monochrome: {
                 enabled: true,
-                color: '#309291',
+                color: '#420690',
                 shadeTo: 'light',
                 shadeIntensity: 0.65
             }
